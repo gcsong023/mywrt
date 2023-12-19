@@ -38,7 +38,7 @@ jobs:
       with:
         path: .commitHash
         # key: HEAD-${{ steps.getHash.outputs.commitHash }}
-        key: HEAD-${{$GITHUB_OUTPUT}}
+        key: HEAD-$GITHUB_OUTPUT
 
     - name: Save New Commit Hash
       if: steps.cacheHash.outputs.cache-hit != 'true'
